@@ -6,14 +6,15 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	int t; /*variable que se usa para intercambiar dos elementos del array*/
-	size_t pass; /*variable para pasar por el array*/
+	int t;
+	size_t pass;
 	size_t i;
 
-	for (pass = 0; pass < size - 1; pass++) /**/
+	print_array(array, size);
+
+	for (pass = 0; pass < size - 1; pass++)
 	{
-		print_array(array, size); /*imprime la actualizacion*/
-						/*del array luego de cada pasada*/
+		print_array(array, size);
 
 		for (i = 0; i < size - 1 - pass; i++)
 		{
@@ -24,5 +25,7 @@ void bubble_sort(int *array, size_t size)
 				array[i + 1] = t;
 			}
 		}
+
+		print_array(array, size);
 	}
 }
